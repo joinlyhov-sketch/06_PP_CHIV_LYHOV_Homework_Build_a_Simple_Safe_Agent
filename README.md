@@ -62,7 +62,7 @@ Instead, the LLM requests a tool call, and the application controls whether that
 A user might ask:
 
 ```text
-Find me a laptop and buy one if it is in stock.
+Buy 1 unit of product 1.
 ```
 
 The agent can decide to perform:
@@ -819,22 +819,10 @@ python-dotenv
 
 ## 1. Create the database
 
-Open PostgreSQL:
-
-```bash
-psql -U postgres
-```
-
 Create the database:
 
 ```sql
 CREATE DATABASE shopping_agent;
-```
-
-Exit:
-
-```sql
-\q
 ```
 
 ---
@@ -842,10 +830,6 @@ Exit:
 ## 2. Initialize the database
 
 From the project directory:
-
-```bash
-psql -U postgres -d shopping_agent -f schema.sql
-```
 
 This creates:
 
